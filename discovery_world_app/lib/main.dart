@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'discovery/login_screen.dart';
+import 'home/home_screen.dart';
+import 'home/informations_items.dart';
 
 void main() => runApp(MyApp());
 
