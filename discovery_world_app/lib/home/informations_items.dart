@@ -1,7 +1,8 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
+import 'dart:js';
 
 class Item extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +16,7 @@ class Item extends StatelessWidget {
             Image.asset('assets/images/vancouver_bandeira.png',
                 width: 600, height: 240, fit: BoxFit.cover),
             titleSection,
-            buttonSection,
+            // buttonSection,
             textSection,
           ],
         ),
@@ -75,18 +76,19 @@ class Item extends StatelessWidget {
     );
   }
 
-  Widget buttonSection = Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        _buildButtonColumn(color, Icons.flag_sharp, 'FLAG'),
-        _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
-        _buildButtonColumn(color, Icons.share, 'SHARE'),
-      ],
-    ),
-  );
 
-  Color color = Theme.of(context).primaryColor;
+  // Widget buttonSection = Container(
+  //   child: Row(
+  //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //     children: [
+  //       _buildButtonColumn(Colors.blue[500], Icons.flag_sharp, 'FLAG'),
+  //       _buildButtonColumn(Colors.blue[500], Icons.near_me, 'ROUTE'),
+  //       _buildButtonColumn(Colors.blue[500], Icons.share, 'SHARE'),
+  //     ],
+  //   ),
+  // );
+
+  // Color color = Theme.of(context).primaryColor;
 
   Widget textSection = Container(
     padding: const EdgeInsets.all(32),

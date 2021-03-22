@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../home/home_screen.dart';
-import './create_user.dart';
+import './login_screen.dart';
 
-class LoginPage extends StatefulWidget {
+class CreateUserPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => new _State();
 }
 
-class _State extends State<LoginPage> {
+class _State extends State<CreateUserPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -80,16 +79,7 @@ class _State extends State<LoginPage> {
                     ),
                   ),
                 ),
-                FlatButton(
-                  onPressed: (){
-                    //forgot password screen
-                  },
-                  textColor: Colors.white,
-                  child: Text(
-                    'Esqueceu sua senha?',
-                    style: TextStyle(fontSize: 16),
-                  ),
-                ),
+                SizedBox(height: 10),
                 Container(
                     height: 50,
                     padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
@@ -97,7 +87,7 @@ class _State extends State<LoginPage> {
                       textColor: Colors.blueAccent,
                       color: Colors.white,
                       child: Text(
-                        'Login',
+                        'Cadastrar',
                         style: TextStyle(fontSize: 28),
                       ),
                       onPressed: () {
@@ -105,38 +95,10 @@ class _State extends State<LoginPage> {
                         print(passwordController.text);                        
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Home()),
+                          MaterialPageRoute(builder: (context) => LoginPage()),
                         );
                       }                      
                     )),
-                Container(
-                    child: Row(
-                      children: <Widget>[
-                        Text(
-                          'Não possui conta?',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white
-                            ),
-                        ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            primary: Colors.lightBlue.shade200,
-                          ),                          
-                          child: Text(
-                            'Inscreva-se aqui',
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          onPressed: () {                        
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => CreateUserPage()),
-                            );
-                          }                      
-                        )
-                      ],
-                      mainAxisAlignment: MainAxisAlignment.center,
-                    ))
               ],
             )));
   }
