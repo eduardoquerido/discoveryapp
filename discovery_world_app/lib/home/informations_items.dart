@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:js';
 
 class Item extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -75,7 +74,6 @@ class Item extends StatelessWidget {
       ],
     );
   }
-
 
   // Widget buttonSection = Container(
   //   child: Row(
